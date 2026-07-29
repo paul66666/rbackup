@@ -10,6 +10,9 @@ clap = { version = "4.6.1", features = ["derive"] }
 log = { version = "0.4.32", features = ["std"] }
 serde = { version = "1.0.228", features = ["derive"] }
 sha2 = "0.11.0"
+time = { version = "0.3.54", features = ["macros"] }
 toml = "1.1.2"
+tracing-appender = "0.2.5"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter", "local-time"] }
 walkdir = "2.5.0"
 zip = "8.6.0"
