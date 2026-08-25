@@ -92,9 +92,9 @@ impl App {
         let cfg = match std::fs::read_to_string(&args.config) {
             Ok(x) => match toml::from_str(&x) {
                 Ok(x) => x,
-                Err(e) => bail!("Unable to read config file '{:?}' : {e}", &args.config),
+                Err(e) => bail!("Unable to read config file '{:?}' : {e}", args.config),
             },
-            Err(e) => bail!("Unable to parse config file '{:?}' : {e}", &args.config),
+            Err(e) => bail!("Unable to parse config file '{:?}' : {e}", args.config),
         };
 
         Ok(App {
@@ -156,7 +156,7 @@ impl App {
         path.push(&self.cfg.output.directory);
         path.push(&archive_name);
 
-        info!("Output : '{}'", &path.display());
+        info!("Output : '{}'", path.display());
 
         let file = match File::create(&path) {
             Ok(x) => x,
