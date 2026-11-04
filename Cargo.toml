@@ -15,4 +15,4 @@ toml = "1.1.2"
 tracing-appender = "0.2.5"
 tracing-subscriber = { version = "0.3.23", features = ["env-filter", "local-time"] }
 walkdir = "2.5.0"
-zip = "8.6.0"
+zip = "9.0.5"
